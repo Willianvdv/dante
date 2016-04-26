@@ -267,7 +267,7 @@ module Dante
         # We're not bothering to sync if we're dumping to /dev/null
         # because /dev/null doesn't care about buffered output
         $stdin.reopen '/dev/null'
-        $stdout.reopen '/dev/null', 'a'
+        $stdout.reopen '/dev/null'
         $stderr.reopen $stdout
       end
       log_path = options[:log_path] ? options[:log_path] : '/dev/null'
